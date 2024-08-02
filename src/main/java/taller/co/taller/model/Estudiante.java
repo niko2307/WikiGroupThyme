@@ -1,4 +1,4 @@
-package taller.co.taller.modelo;
+package taller.co.taller.model;
 
 public class Estudiante {
     private String name;
