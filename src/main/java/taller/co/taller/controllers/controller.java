@@ -20,10 +20,13 @@ public class controller {
         teamMembers.add(new TeamMember("Juan Pérez", "Desarrollador", "Experto en Java y Spring."));
         teamMembers.add(new TeamMember("María García", "Diseñadora", "Especialista en UI/UX."));
         teamMembers.add(new TeamMember("Carlos López", "Gerente de Proyecto", "Liderando proyectos de software."));
+        teamMembers.add(new TeamMember("Carlos López", "Gerente de Proyecto", "Liderando proyectos de software."));
 
         model.addAttribute("teamMembers", teamMembers);
 
         return "wikigroup"; 
     }
+
+
     
 }

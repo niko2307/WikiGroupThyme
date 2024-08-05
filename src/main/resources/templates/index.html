@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WikiGroup</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  
+</head>
+<body>
+     <header class="header">
+          <a href="#" class="logo">Bienvenidos a tu casa</a>
+          <input type="checkbox" id="check">
+         <label for="check" class="icons">
+            <i class='bx bx-menu' id="icon-menu"></i>
+            <i class='bx bx-x' id="icon-close" ></i>
+         </label>
+        <nav class="navegacion">
+            <a href="/controllers/wikigroup">Nuestro equipo</a>
+            <a href="#" style="--i:0;">Descripcion</a>
+            <a href="#" style="--i:1;">Requerimientos</a>
+            <a href="#" style="--i:2;">Arquitectura</a>
+            <a href="#" style="--i:3;">Pruebas</a>
+            <a href="#" style="--i:4;">Despliegue</a>
+            <a href="#" style="--i:5;">Para desarrollo</a>
+            <a href="#" style="--i:6;">Contactanos</a>
+        </nav>
+    </header>
+    <script th:src="@{/js/script.js}"></script>
+</body>
+</html>
