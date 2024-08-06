@@ -210,5 +210,19 @@ form button:hover {
     display: block;
     opacity: 1;
 }
+.char-counter {
+    font-size: 0.8em;
+    color: #555;
+}
+
+input.error {
+    border-color: red;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+}
+
 
 
