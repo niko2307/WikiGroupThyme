@@ -7,6 +7,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -44,14 +45,12 @@ public class controller {
 
     // Ruta para manejar el envío del formulario de contacto
     @PostMapping("/formulario")
-    public String submitFormulario(Formulario formulario, Model model) {
-        
+    public String submitFormulario(@ModelAttribute Formulario formulario, Model model) {
         formularioRepository.save(formulario);
-        model.addAttribute("message", "Formulario enviado por: " + formulario.getName() + " " + formulario.getLastname());
-        System.out.println("Formulario recibido: " + formulario.getName() + " " + formulario.getLastname() + " " + formulario.getEmail() + " " + formulario.getPhone() + " " + formulario.getCity());
-        return "formulario";
+        model.addAttribute("message", "Formulario enviado correctamente");
+        System.out.println("se envio en formulario");
+        return "formulario"; // Redirige a la misma vista o a una vista diferente según tu necesidad
     }
-
 
     
 }
