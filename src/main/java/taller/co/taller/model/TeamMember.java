@@ -14,12 +14,7 @@ public class TeamMember {
         this.bio = bio;
         this.imageUrl = imageUrl;
     }
-    public TeamMember(String name, String role, String bio) {
-        this.name = name;
-        this.role = role;
-        this.bio = bio;
-        
-    }
+
 
     public String getName() {
         return name;
