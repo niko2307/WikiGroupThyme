@@ -23,10 +23,10 @@ public class controller {
         List<TeamMember> teamMembers = new ArrayList<>();
         
         // Añadir miembros del equipo
-        teamMembers.add(new TeamMember("Juan Pérez", "Desarrollador", "Experto en Java y Spring."));
-        teamMembers.add(new TeamMember("María García", "Diseñadora", "Especialista en UI/UX."));
-        teamMembers.add(new TeamMember("Carlos López", "Gerente de Proyecto", "Liderando proyectos de software."));
-        teamMembers.add(new TeamMember("Carlos López", "Gerente de Proyecto", "Liderando proyectos de software."));
+        teamMembers.add(new TeamMember("Nicolas Aguilar", "Desarrollador", "Experto en Java y Spring.", "../images/pfp/pfpNicolas.jpeg"));
+        teamMembers.add(new TeamMember("Juan Torres", "Diseñadora", "Especialista en UI/UX.", "../images/pfp/pfpJuan.jpeg"));
+        teamMembers.add(new TeamMember("Gustavo Parra", "Gerente de Proyecto", "Liderando proyectos de software.", "../images/pfp/pfpGustavo.jpeg"));
+        teamMembers.add(new TeamMember("Sebastian Nariño", "Gerente de Proyecto", "Liderando proyectos de software.", "../images/pfp/pfpSebastian.jpeg"));
 
         model.addAttribute("teamMembers", teamMembers);
 
