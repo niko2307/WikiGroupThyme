@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 
 @Entity
 
-public class Formulario {
+public class Form {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -19,7 +19,7 @@ public class Formulario {
     
 
     
-    public Formulario(Long id, String name, String lastname, String email, int semestre, String descripcion) {
+    public Form(Long id, String name, String lastname, String email, int semestre, String descripcion) {
         this.id = id;
         this.name = name;
         this.lastname = lastname;
@@ -29,7 +29,7 @@ public class Formulario {
     }
 
 
-    public Formulario() {
+    public Form() {
     }
 
 

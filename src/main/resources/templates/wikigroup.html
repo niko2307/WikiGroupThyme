@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nuestro Equipo</title>
-    <link rel="stylesheet" href="/css/styles.css"  th:href="@{/css/styles.css}"/>
+    <link
+      rel="stylesheet"
+      href="/css/styles.css"
+      th:href="@{/css/styles.css}"
+    />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -22,14 +26,14 @@
         <a href="/controllers/wikigroup">Nuestro equipo</a>
         <a href="#" style="--i: 0">Descripcion</a>
         <a href="#" style="--i: 1">Requerimientos</a>
-        <a href="#" style="--i: 2">Arquitectura</a>
+        <a href="/controllers/arquitecture" style="--i: 2">Arquitectura</a>
         <a href="/controllers/pruebas" style="--i: 3">Pruebas</a>
         <a href="#" style="--i: 4">Despliegue</a>
         <a href="#" style="--i: 5">Para desarrollo</a>
-        <a href="/controllers/formulario" style="--i: 6">Contactanos</a>
+        <a href="/controllers/form" style="--i: 6">Contactanos</a>
       </nav>
     </header>
-    
+
     <div class="wikigroup-container">
       <div class="wikigroup">
         <h1 class="title">Conoce a nuestro equipo</h1>
@@ -43,6 +47,6 @@
         </div>
       </div>
     </div>
-    <script src="/js/script.js"  th:src="@{/js/script.js}"></script>
+    <script src="/js/script.js" th:src="@{/js/script.js}"></script>
   </body>
 </html>

@@ -1,6 +1,6 @@
 package taller.co.taller.model;
 
-public class Estudiante {
+public class Student {
     private String name;
     private String lastname;
     private String email;
@@ -8,7 +8,7 @@ public class Estudiante {
     private String description;
 
     
-    public Estudiante(String name, String lastname, String email, int semester, String description) {
+    public Student(String name, String lastname, String email, int semester, String description) {
         this.name = name;
         this.lastname = lastname;
         this.email = email;

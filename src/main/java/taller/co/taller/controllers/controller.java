@@ -12,14 +12,17 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import taller.co.taller.model.Formulario;
-import taller.co.taller.model.Pruebas;
+import taller.co.taller.model.Arquitecture;
+import taller.co.taller.model.Form;
+import taller.co.taller.model.Tests;
 import taller.co.taller.model.TeamMember;
-import taller.co.taller.repositories.FormularioRepository;
+import taller.co.taller.repositories.formRepository;
 
 @Controller
 @RequestMapping("/controllers")
 public class controller {
+
+    // controlador para la plantilla de wikigroup
     @GetMapping("/wikigroup")
     public String getTeamPage(Model model) {
         List<TeamMember> teamMembers = new ArrayList<>();
@@ -34,41 +37,61 @@ public class controller {
 
         return "wikigroup"; 
     }
+    // controlador para la plantilla de arquitectura
+    @GetMapping("/arquitecture")
+    public String getArchitecturePage(Model model) {
+        String contextDiagramUrl = "../images/arquitecture/contextDiagram.jpeg";
+        String containerDiagramUrl = "../images/arquitecture/containerDiagram.jpeg";
+        String componentDiagramUrl = "../images/arquitecture/componentDiagram.jpeg";
+        String entityRelationModelUrl = "../images/arquitecture/entityRelationModel.jpeg";
+        String deploymentDiagramUrl = "../images/arquitecture/deploymentDiagram.jpeg";
+
+        Arquitecture arq = new Arquitecture(
+        contextDiagramUrl, 
+        containerDiagramUrl, 
+        componentDiagramUrl, 
+        entityRelationModelUrl, 
+        deploymentDiagramUrl);
+
+        model.addAttribute("arq", arq);
+
+        return "arquitecture"; 
+    }
 
 
     @Autowired
-    private FormularioRepository formularioRepository;
+    private formRepository formRepository;
     
-    // Ruta para mostrar el formulario de contacto
-    @GetMapping("/formulario")
-    public String showFormulario(Model model) {
-        model.addAttribute("formulario", new Formulario());
-        return "formulario";
+    // Ruta para mostrar el form de contacto
+    @GetMapping("/form")
+    public String showform(Model model) {
+        model.addAttribute("form", new Form());
+        return "form";
     }
 
-    // Ruta para manejar el envío del formulario de contacto
-    @PostMapping("/formulario")
-    public String submitFormulario(@ModelAttribute Formulario formulario, Model model) {
-        formularioRepository.save(formulario);
-        model.addAttribute("message", "Formulario enviado correctamente");
-        System.out.println("se envio en formulario");
-        return "formulario";
+    // Ruta para manejar el envío del form de contacto
+    @PostMapping("/form")
+    public String submitform(@ModelAttribute Form form, Model model) {
+        formRepository.save(form);
+        model.addAttribute("message", "form enviado correctamente");
+        System.out.println("se envio en form");
+        return "form";
     }
 
 
-    // controlador para la plantilla de pruerbas 
+    // controlador para la plantilla de pruebas
     @GetMapping("/pruebas")
     public String mostrarPruebas(Model model) {
         // Datos de ejemplo para pruebas de frontend
-        List<Pruebas> pruebasFrontend = Arrays.asList(
-            new Pruebas("Prueba de Página de Inicio", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque facilis aspernatur, id impedit repellat consequatur porro, ipsam eveniet iste eius quae a minus corrupti itaque nostrum fugiat obcaecati dicta aliquid!", "../images/pruebas/frontuno.png"),
-            new Pruebas("Prueba de Formulario de Contacto", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque facilis aspernatur, id impedit repellat consequatur porro, ipsam eveniet iste eius quae a minus corrupti itaque nostrum fugiat obcaecati dicta aliquid!", "../images/pruebas/frontdos.png")
+        List<Tests> pruebasFrontend = Arrays.asList(
+            new Tests("Prueba de Página de Inicio", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque facilis aspernatur, id impedit repellat consequatur porro, ipsam eveniet iste eius quae a minus corrupti itaque nostrum fugiat obcaecati dicta aliquid!", "../images/pruebas/frontuno.png"),
+            new Tests("Prueba de form de Contacto", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque facilis aspernatur, id impedit repellat consequatur porro, ipsam eveniet iste eius quae a minus corrupti itaque nostrum fugiat obcaecati dicta aliquid!", "../images/pruebas/frontdos.png")
         );
 
         // Datos de ejemplo para pruebas de backend
-        List<Pruebas> pruebasBackend = Arrays.asList(
-            new Pruebas("Prueba de API de Usuarios", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque facilis aspernatur, id impedit repellat consequatur porro, ipsam eveniet iste eius quae a minus corrupti itaque nostrum fugiat obcaecati dicta aliquid!", "../images/pruebas/backuno.png"),
-            new Pruebas("Prueba de Autenticación", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque facilis aspernatur, id impedit repellat consequatur porro, ipsam eveniet iste eius quae a minus corrupti itaque nostrum fugiat obcaecati dicta aliquid!", "../images/pruebas/backdos.png")
+        List<Tests> pruebasBackend = Arrays.asList(
+            new Tests("Prueba de API de Usuarios", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque facilis aspernatur, id impedit repellat consequatur porro, ipsam eveniet iste eius quae a minus corrupti itaque nostrum fugiat obcaecati dicta aliquid!", "../images/pruebas/backuno.png"),
+            new Tests("Prueba de Autenticación", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque facilis aspernatur, id impedit repellat consequatur porro, ipsam eveniet iste eius quae a minus corrupti itaque nostrum fugiat obcaecati dicta aliquid!", "../images/pruebas/backdos.png")
         );
 
         model.addAttribute("pruebasFrontend", pruebasFrontend);

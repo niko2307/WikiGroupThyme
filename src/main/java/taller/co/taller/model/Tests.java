@@ -1,20 +1,20 @@
 package taller.co.taller.model;
 
-public class Pruebas {
+public class Tests {
     private String titulo;
     private String descripcion;
     private String imagen;
 
     // Constructor, getters y setters
 
-    public Pruebas(String titulo, String descripcion, String imagen) {
+    public Tests(String titulo, String descripcion, String imagen) {
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.imagen = imagen;
     }
     
 
-    public Pruebas() {
+    public Tests() {
     }
 
 
