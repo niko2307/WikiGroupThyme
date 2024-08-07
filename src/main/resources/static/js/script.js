@@ -68,3 +68,44 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const pruebaItems = document.querySelectorAll('.prueba-item');
+    const modalOverlay = document.getElementById('modal-overlay');
+    const modalClose = document.getElementById('modal-close');
+    const modalTitle = document.getElementById('modal-title');
+    const modalImage = document.getElementById('modal-image');
+    const modalDescription = document.getElementById('modal-description');
+
+    pruebaItems.forEach(item => {
+        item.addEventListener('click', function() {
+            // Obtener la información de la prueba
+            const title = this.querySelector('.prueba-text h3').textContent;
+            const imageSrc = this.querySelector('.prueba-imagen').src;
+            const description = this.querySelector('.prueba-text p').textContent;
+
+            // Actualizar el contenido del modal
+            modalTitle.textContent = title;
+            modalImage.src = imageSrc;
+            modalDescription.textContent = description;
+
+            // Mostrar el modal
+            modalOverlay.style.display = 'flex';
+        });
+    });
+
+    // Cerrar el modal al hacer clic en el botón de cierre o en el overlay
+    modalClose.addEventListener('click', function() {
+        modalOverlay.style.display = 'none';
+    });
+
+    modalOverlay.addEventListener('click', function(event) {
+        if (event.target === modalOverlay) {
+            modalOverlay.style.display = 'none';
+        }
+    });
+});
+
+
+

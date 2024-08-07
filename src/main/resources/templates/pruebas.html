@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pruebas del proyecto</title>
+    <link rel="stylesheet"  href="/css/styles.css" th:href="@{/css/styles.css}">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="/" class="logo">Bienvenidos a tu casa</a>
+        <input type="checkbox" id="check">
+       <label for="check" class="icons">
+          <i class='bx bx-menu' id="icon-menu"></i>
+          <i class='bx bx-x' id="icon-close" ></i>
+       </label>
+      <nav class="navegacion">
+          <a href="/controllers/wikigroup">Nuestro equipo</a>
+          <a href="#" style="--i:0;">Descripcion</a>
+          <a href="#" style="--i:1;">Requerimientos</a>
+          <a href="#" style="--i:2;">Arquitectura</a>
+          <a href="/controllers/pruebas" style="--i:3;">Pruebas</a>
+          <a href="#" style="--i:4;">Despliegue</a>
+          <a href="#" style="--i:5;">Para desarrollo</a>
+          <a href="/controllers/formulario" style="--i:6;">Contactanos</a>
+      </nav>
+  </header>
+
+  <main>
+    <h1>Pruebas del Proyecto</h1>
+    <div class="pruebas-container">
+        <!-- Columna de Pruebas del Frontend -->
+        <div class="pruebas-column">
+            <h2>Pruebas de Frontend</h2>
+            <!-- Elementos de prueba generados dinámicamente -->
+            <div th:each="prueba : ${pruebasFrontend}" class="prueba-item">
+                <div class="prueba-content">
+                    <img th:src="@{${prueba.imagen}}" alt="Imagen de la prueba" class="prueba-imagen">
+                    <div class="prueba-text">
+                        <h3 th:text="${prueba.titulo}">Título de la Prueba</h3>
+                        <p th:text="${prueba.descripcion}">Descripción de la prueba.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Columna de Pruebas del Backend -->
+        <div class="pruebas-column">
+            <h2>Pruebas de Backend</h2>
+            <!-- Elementos de prueba generados dinámicamente -->
+            <div th:each="prueba : ${pruebasBackend}" class="prueba-item">
+                <div class="prueba-content">
+                    <img th:src="@{${prueba.imagen}}" alt="Imagen de la prueba" class="prueba-imagen">
+                    <div class="prueba-text">
+                        <h3 th:text="${prueba.titulo}">Título de la Prueba</h3>
+                        <p th:text="${prueba.descripcion}">Descripción de la prueba.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Modal -->
+<div id="modal-overlay" class="modal-overlay">
+    <div id="modal-body" class="modal-body">
+        <button id="modal-close" class="modal-close">X</button>
+        <!-- Contenido del modal será inyectado aquí por el script -->
+        <div id="modal-content" class="modal-content">
+            <h3 id="modal-title">Título de la Prueba</h3>
+            <img id="modal-image" src="" alt="Imagen de la prueba" class="modal-image">
+            <p id="modal-description">Descripción de la prueba.</p>
+        </div>
+    </div>
+</div>
+
+
+    <script src="/js/script.js"  th:src="@{/js/script.js}"></script>
+</body>
+</html>

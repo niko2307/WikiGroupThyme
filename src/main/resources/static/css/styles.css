@@ -275,3 +275,166 @@ input.error {
   }
   }
   }
+
+
+  /* Estilos de pruebas */
+
+/* Estilos del Modal */
+.modal-overlay {
+  display: none; /* Inicialmente oculto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Asegura que esté sobre otros contenidos */
+}
+
+.modal-body {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  max-width: 90%; /* Ajuste para el tamaño del modal */
+  max-height: 90%; /* Ajuste para el tamaño del modal */
+  overflow: auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ddd;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.modal-title {
+  margin-bottom: 10px;
+  font-size: 24px; /* Tamaño del título */
+}
+
+.modal-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px; /* Espacio entre la imagen y la descripción */
+}
+
+.modal-description {
+  font-size: 16px; /* Tamaño de la descripción */
+  color: #333; /* Color del texto */
+}
+
+
+main {
+  margin-top: 100px; /* Ajusta este valor según el tamaño del header */
+  padding: 0 20px; /* Espacio adicional en los lados del main para centrado */
+}
+
+main h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #ddd;
+}
+
+.pruebas-container {
+  display: flex;
+  justify-content: center; /* Centra las columnas dentro del contenedor */
+  flex-wrap: wrap;
+  gap: 20px; /* Espacio entre columnas */
+  padding: 0; /* Quita el padding lateral para evitar desbordes */
+}
+
+.pruebas-column {
+  flex: 1;
+  max-width: 30%; /* Ajuste para que quepan dos columnas con espacio entre ellas */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px; /* Espacio lateral para centrar el contenido */
+}
+
+.prueba-item {
+  background-color: white;
+  margin: 10px 0; /* Espacio entre elementos dentro de la columna */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.prueba-imagen {
+  width: 100%;
+  height: 200px; /* Ajuste de altura para un tamaño uniforme */
+  object-fit: cover; /* Recortar la imagen si es necesario */
+  border-radius: 8px;
+}
+
+.prueba-text {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.prueba-text h3 {
+  margin-bottom: 10px;
+}
+
+.prueba-text p {
+  margin-bottom: 0;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 992px) {
+  .pruebas-container {
+      justify-content: center; /* Asegura el centrado en pantallas más pequeñas */
+  }
+
+  .pruebas-column {
+      max-width: 100%;
+      margin: 10px 0; /* Espacio vertical entre columnas en pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 768px) {
+  .pruebas-container {
+      flex-direction: column;
+      justify-content: center; /* Asegura el centrado en pantallas más pequeñas */
+  }
+
+  .pruebas-column {
+      max-width: 100%;
+      align-items: center; /* Alinea los elementos al centro en pantallas pequeñas */
+  }
+
+  .prueba-item {
+      max-width: 100%;
+  }
+}
