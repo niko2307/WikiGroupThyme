@@ -33,6 +33,7 @@ public class controller {
         return "wikigroup"; 
     }
 
+
     @Autowired
     private FormularioRepository formularioRepository;
     
@@ -49,7 +50,7 @@ public class controller {
         formularioRepository.save(formulario);
         model.addAttribute("message", "Formulario enviado correctamente");
         System.out.println("se envio en formulario");
-        return "formulario"; // Redirige a la misma vista o a una vista diferente según tu necesidad
+        return "formulario";
     }
 
     

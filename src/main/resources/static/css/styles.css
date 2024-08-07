@@ -133,6 +133,7 @@ body {
 }
 
 
+
  /* Estilos generales para el formulario de contacto */
 .form-container {
     max-width: 600px; /* Máximo ancho del contenedor del formulario */
@@ -216,63 +217,61 @@ input.error {
     font-size: 0.9em;
 }
 
-/*Wikigroup*/
 .wikigroup-container {
-  margin-top: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  text-align: center;
-
-  .wikigroup {
-    display: inline-block;
-    /* background-color: rgba(61, 61, 61); */
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-    border-radius: 20px;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     text-align: center;
-
-    color: white;
-
-    .title {
-      margin-bottom: 40px;
-      text-transform: uppercase;
-      font-weight: 700;
-      font-size: 38px;
-      text-shadow: 2px 2px 4px #000000;
-    }
-
-    .team-list {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
-
-      .member {
-        text-align: center;
-        border-radius: 10px;
-        padding: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        background-color: rgb(22, 30, 54);
-
-        .name {
-          padding: 5px 0;
-        }
-
-        .role {
-          font-size: 20px;
-          padding-bottom: 8px;
-          color: rgba(118, 152, 232, 0.594);
-        }
-
-        img {
-          height: 200px;
-          width: 100%;
-          object-fit: cover;
-          border-radius: 10px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+  
+    .wikigroup {
+      display: inline-block;
+      /* background-color: rgba(61, 61, 61); */
+      /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+      border-radius: 20px;
+      text-align: center;
+  
+      color: white;
+  
+      .title {
+        margin-bottom: 40px;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 38px;
+        text-shadow: 2px 2px 4px #000000;
       }
-    }
+  
+      .team-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+  
+        .member {
+          text-align: center;
+          border-radius: 10px;
+          padding: 20px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          background-color: rgb(22, 30, 54);
+  
+          .name {
+            padding: 5px 0;
+          }
+  
+          .role {
+            font-size: 20px;
+            padding-bottom: 8px;
+            color: rgba(118, 152, 232, 0.594);
+          }
+  
+          img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          }
+     }
   }
-}
-
+  }
+  }
