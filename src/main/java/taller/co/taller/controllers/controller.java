@@ -38,6 +38,12 @@ public class controller {
 
         return "wikigroup"; 
     }
+
+    @GetMapping("/description")
+    public String getDescriptionPage(Model model) {
+
+        return "description"; 
+    }
     // controlador para la plantilla de arquitectura
     @GetMapping("/arquitecture")
     public String getArchitecturePage(Model model) {
