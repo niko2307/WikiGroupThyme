@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deployment</title>
+    <link
+      rel="stylesheet"
+      href="/css/styles.css"
+      th:href="@{/css/styles.css}"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <header class="header">
+        <a href="/" class="logo">Bienvenidos a tu casa</a>
+        <input type="checkbox" id="check" />
+        <label for="check" class="icons">
+          <i class="bx bx-menu" id="icon-menu"></i>
+          <i class="bx bx-x" id="icon-close"></i>
+        </label>
+        <nav class="navegacion">
+          <a href="/controllers/wikigroup">Nuestro equipo</a>
+          <a href="#" style="--i: 0">Descripcion</a>
+          <a href="#" style="--i: 1">Requerimientos</a>
+          <a href="/controllers/arquitecture" style="--i: 2">Arquitectura</a>
+          <a href="/controllers/pruebas" style="--i: 3">Pruebas</a>
+          <a href="/controllers/deployment" style="--i: 4">Despliegue</a>
+          <a href="#" style="--i: 5">Para desarrollo</a>
+          <a href="/controllers/form" style="--i: 6">Contactanos</a>
+        </nav>
+      </header>
+
+      <main>
+        <h1>Despliegue del Proyecto</h1>
+        <div class="deployment-container">
+            <div th:each="deployment : ${deployments}" class="deployment-item">
+                <h3 th:text="${deployment.titulo}">Título del Despliegue</h3>
+                <img th:src="@{${deployment.imagen}}" alt="Imagen del despliegue" class="deployment-imagen">
+                <div class="deployment-text">
+                    <p th:text="${deployment.descripcion}">Descripción del despliegue.</p>
+                    <p>Status: <span th:text="${deployment.status}">Status del despliegue</span></p>
+                    <p>Versión: <span th:text="${deployment.version}">Versión del despliegue</span></p>
+                    <p>Fecha: <span th:text="${deployment.fecha}">Fecha del despliegue</span></p>
+                    <p>Autor: <span th:text="${deployment.autor}">Autor del despliegue</span></p>
+                    <p>Tiempo: <span th:text="${deployment.tiempo}">Tiempo del despliegue</span></p>
+                    <details>
+                        <summary>Logs</summary>
+                        <p th:text="${deployment.logs}">Logs del despliegue</p>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>
