@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EndPoints</title>
+    <link
+      rel="stylesheet"
+      href="/css/styles.css"
+      th:href="@{/css/styles.css}"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+</head>
+<body>
+    <div th:replace="fragments/navbar :: header"></div>
+    <main>
+        <h1>Documentación de API</h1>
+        <div class="api-endpoints-container">
+            <div th:each="endpoint : ${endpoints}" class="api-endpoint-item">
+                <h3 th:text="${endpoint.endpointName}">Nombre del Endpoint</h3>
+                <p><strong>Método:</strong> <span th:text="${endpoint.httpMethod}">GET</span></p>
+                <p><strong>URL:</strong> <span th:text="${endpoint.url}">/api/users</span></p>
+                <p th:text="${endpoint.description}">Descripción del Endpoint</p>
+
+                <h4>Parámetros</h4>
+                <ul>
+                    <li th:each="param : ${endpoint.parameters}">
+                        <strong th:text="${param.name}">Nombre del Parámetro</strong> 
+                        (<span th:text="${param.type}">Tipo</span>) 
+                        <span th:text="${param.required ? 'Requerido' : 'Opcional'}"></span>: 
+                        <span th:text="${param.description}">Descripción</span>
+                    </li>
+                </ul>
+
+                <h4>Respuesta</h4>
+                <pre th:text="${endpoint.response}">{ "users": [...] }</pre>
+
+                <h4>Códigos de Estado</h4>
+                <ul>
+                    <li th:each="status : ${endpoint.statusCodes}">
+                        <strong th:text="${status.code}">200</strong> 
+                        <span th:text="${status.message}">OK</span>
+                    </li>
+                </ul>
+
+                <h4>Ejemplos de Uso</h4>
+                <pre th:text="${endpoint.usageExamples}">curl -H 'Authorization: Bearer token' https://example.com/api/users</pre>
+
+                <h4>Notas Adicionales</h4>
+                <p th:text="${endpoint.notes}">Notas adicionales sobre el endpoint.</p>
+            </div>
+        </div>
+    </main>
+    
+    <script src="/js/script.js" th:src="@{/js/script.js}"></script>
+</body>
+</html>

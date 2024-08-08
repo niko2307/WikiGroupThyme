@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+  // Bloque 1: Manejo del formulario de contacto
   const form = document.getElementById('contactForm');
   const fields = {
     name: { maxChars: 50, counter: document.getElementById('nameCounter') },
@@ -77,9 +78,8 @@ document.addEventListener('DOMContentLoaded', function () {
       }, 3000);
     }
   });
-});
 
-document.addEventListener('DOMContentLoaded', function () {
+  // Bloque 2: Manejo del modal de pruebas
   const pruebaItems = document.querySelectorAll('.prueba-item');
   const modalOverlay = document.getElementById('modal-overlay');
   const modalClose = document.getElementById('modal-close');

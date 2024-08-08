@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import taller.co.taller.model.Arquitecture;
 import taller.co.taller.model.Deployment;
+import taller.co.taller.model.EndPoint;
 import taller.co.taller.model.Form;
 import taller.co.taller.model.Tests;
 import taller.co.taller.model.TeamMember;
@@ -118,6 +119,29 @@ public class controller {
 
         model.addAttribute("deployments", deployments);
         return "deployment";
+    }
+
+    @GetMapping("/endpoint")
+    public String mostrarEndpoints(Model model) {
+/*          List<EndPoint> endpoints = Arrays.asList(
+            new EndPoint(
+                "Obtener Usuarios", 
+                "GET", 
+                "/api/users", 
+                "Obtiene la lista de usuarios.", 
+                Arrays.asList(new EndPoint.Parameter("page", "int", false, "Número de la página")),
+                null, 
+                Arrays.asList(new EndPoint.Header("Authorization", "Bearer token")),
+                "{ \"users\": [...] }",
+                Arrays.asList(new EndPoint.StatusCode(200, "OK"), new EndPoint.StatusCode(401, "Unauthorized")),
+                true,
+                "curl -H 'Authorization: Bearer token' https://example.com/api/users",
+                "Este endpoint es para uso interno."
+            )
+            // Agregar más endpoints aquí
+        ); */
+        //model.addAttribute("endpoints", endpoints);
+        return "endpoint";
     }
 
     
