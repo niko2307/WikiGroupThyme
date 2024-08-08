@@ -6,10 +6,8 @@
 }
 
 body {
-  min-height: 100vh;
-  background: url('/images/image.png') no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-color: #c3e6cb;
+  margin-top: 20%;
 }
 /* navegacion principal*/
 .header {
@@ -140,7 +138,6 @@ body {
   background-color: rgba(255, 255, 255, .80);
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-top: 100px; /* Ajusta según el tamaño del header */
 }
 .form-container h1 {
   text-align: center;
@@ -218,7 +215,6 @@ input.error {
 /* estilos wiki */
 
 .wikigroup-container {
-  margin-top: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -231,7 +227,6 @@ input.error {
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
     border-radius: 20px;
     text-align: center;
-
     color: white;
 
     .title {
