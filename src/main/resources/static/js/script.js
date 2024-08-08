@@ -79,7 +79,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+<<<<<<< HEAD
   // Bloque 2: Manejo del modal de pruebas
+=======
+// para pruebas 
+
+document.addEventListener('DOMContentLoaded', function () {
+>>>>>>> 54640bfc09c351ce95bde98bb4b7a38b6485ba92
   const pruebaItems = document.querySelectorAll('.prueba-item');
   const modalOverlay = document.getElementById('modal-overlay');
   const modalClose = document.getElementById('modal-close');
@@ -115,3 +121,4 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+

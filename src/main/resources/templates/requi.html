@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requerimientos</title>
+    <link
+    rel="stylesheet"
+    href="/css/styles.css"
+    th:href="@{/css/styles.css}"
+  />
+  <link
+    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    rel="stylesheet"
+  />
+</head>
+<body>
+    <div th:replace="fragments/navbar :: header"></div>
+    <div class="text-container">
+        <h1>Requisitos del Sistema</h1>
+        
+        <div class="text-container">
+            <h2>Requisitos Funcionales</h2>
+            <ul>
+                <li>HUA.21. Calificar arrendatario</li>
+                <li>HUA.20. Calificar finca</li>
+                <li>HUA.19. Pagar arriendo</li>
+                <li>HUA.18. Ver solicitudes de arriendo</li>
+                <li>HUA.17. Solicitar arriendo</li>
+                <li>HUA.16. Buscar propiedades</li>
+                <li>HUA.15. Autenticación</li>
+                <li>HUA.14. Activación de cuenta</li>
+                <li>HUA.13. Creación de cuenta</li>
+                <li>HUA.12. Calificar arrendatario</li>
+            </ul>
+        </div>
+
+        <div class="text-container">
+            <h2>Requisitos No Funcionales</h2>
+            <ul>
+                <li>Rendimiento: El sistema debe ser capaz de manejar hasta 10,000 usuarios concurrentes.</li>
+                <li>Seguridad: Todas las transacciones deben estar encriptadas usando TLS.</li>
+                <li>Usabilidad: La interfaz de usuario debe ser intuitiva y fácil de usar.</li>
+                <li>Escalabilidad: El sistema debe ser escalable para acomodar el crecimiento futuro.</li>
+                <li>Mantenibilidad: El código debe seguir las mejores prácticas para facilitar el mantenimiento.</li>
+                <li>Disponibilidad: El sistema debe tener una disponibilidad del 99.9%.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
