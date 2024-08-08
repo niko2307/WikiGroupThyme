@@ -48,6 +48,12 @@ public class controller {
 
         return "description"; 
     }
+
+    @GetMapping("/requi")
+    public String getRequiPage(Model model) {
+
+        return "requi"; 
+    }
     // controlador para la plantilla de arquitectura
     @GetMapping("/arquitecture")
     public String getArchitecturePage(Model model) {
