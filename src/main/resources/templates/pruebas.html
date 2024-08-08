@@ -15,24 +15,7 @@
     />
   </head>
   <body>
-    <header class="header">
-      <a href="/" class="logo">Bienvenidos a tu casa</a>
-      <input type="checkbox" id="check" />
-      <label for="check" class="icons">
-        <i class="bx bx-menu" id="icon-menu"></i>
-        <i class="bx bx-x" id="icon-close"></i>
-      </label>
-      <nav class="navegacion">
-        <a href="/controllers/wikigroup">Nuestro equipo</a>
-        <a href="#" style="--i: 0">Descripcion</a>
-        <a href="#" style="--i: 1">Requerimientos</a>
-        <a href="/controllers/arquitecture" style="--i: 2">Arquitectura</a>
-        <a href="/controllers/pruebas" style="--i: 3">Pruebas</a>
-        <a href="/controllers/deployment" style="--i: 4">Despliegue</a>
-        <a href="#" style="--i: 5">Para desarrollo</a>
-        <a href="/controllers/form" style="--i: 6">Contactanos</a>
-      </nav>
-    </header>
+    <div th:replace="fragments/navbar :: header"></div>
 
     <main>
       <h1>Pruebas del Proyecto</h1>

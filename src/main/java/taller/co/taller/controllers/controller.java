@@ -30,7 +30,7 @@ public class controller {
         
         // Añadir miembros del equipo
         teamMembers.add(new TeamMember("Nicolas Aguilar", "Desarrollador", "Experto en Java y Spring.", "../images/pfp/pfpNicolas.jpeg"));
-        teamMembers.add(new TeamMember("Juan Torres", "Diseñadora", "Especialista en UI/UX.", "../images/pfp/pfpJuan.jpeg"));
+        teamMembers.add(new TeamMember("Juan Torres", "Diseñador", "Especialista en UI/UX.", "../images/pfp/pfpJuan.jpeg"));
         teamMembers.add(new TeamMember("Gustavo Parra", "Gerente de Proyecto", "Liderando proyectos de software.", "../images/pfp/pfpGustavo.jpeg"));
         teamMembers.add(new TeamMember("Sebastian Nariño", "Gerente de Proyecto", "Liderando proyectos de software.", "../images/pfp/pfpSebastian.jpeg"));
 
