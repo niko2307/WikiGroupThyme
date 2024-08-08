@@ -16,7 +16,21 @@
   </head>
   <body>
     <div th:replace="fragments/navbar :: header"></div>
-    <h1>Description page</h1>
+    <div class="text-container">
+      <h1>Descripción del proyecto</h1>
+      <p>Para el desarrollo de esta aplicación, se deben considerar dos perfiles de usuarios principales: el “Usuario Arrendatario” y el “Usuario Arrendador”.
+
+        El “Usuario Arrendatario” tendrá la capacidad de realizar una variedad de acciones relacionadas con la gestión de propiedades y la interacción con otros usuarios. Entre estas acciones se incluyen la creación, edición, eliminación y actualización de propiedades disponibles para arrendamiento. Además, este usuario será responsable de revisar y responder a todas las solicitudes de arrendamiento recibidas, teniendo la opción de aceptarlas o cancelarlas según corresponda. También será su responsabilidad verificar los pagos realizados por los arrendadores y proporcionar calificaciones y comentarios sobre la experiencia de arrendamiento.
+        
+        Por otro lado, el “Usuario Arrendador” tendrá un conjunto diferente de funcionalidades diseñadas para facilitar el proceso de búsqueda y arrendamiento de propiedades. Este usuario podrá buscar fincas disponibles filtradas por ubicación geográfica, así como solicitar el arrendamiento de una finca específica. Una vez que se apruebe la solicitud, el arrendador podrá realizar el pago correspondiente del arriendo y, posteriormente, calificar tanto la finca arrendada como al arrendatario.
+        
+        La implementación de esta aplicación requerirá la integración de un sistema de autenticación y autorización robusto para gestionar los diferentes roles y permisos de los usuarios. Además, se necesitarán interfaces de usuario intuitivas y funcionales que permitan a los usuarios interactuar de manera efectiva con la plataforma.
+        
+        El flujo de trabajo para el “Usuario Arrendatario” implicará la gestión activa de las propiedades disponibles, la revisión y respuesta a las solicitudes de arrendamiento, así como el seguimiento de los pagos realizados y la provisión de retroalimentación sobre las experiencias de arrendamiento. Por otro lado, el “Usuario Arrendador” estará enfocado en la búsqueda y arrendamiento de propiedades, así como en la gestión de los pagos y la calificación de la experiencia general.
+        
+        En resumen, el desarrollo de esta aplicación requerirá una planificación detallada y un enfoque centrado en el usuario para garantizar una experiencia fluida y satisfactoria para todos los usuarios involucrados. La implementación exitosa de esta plataforma requerirá una cuidadosa consideración de las necesidades y expectativas tanto de los arrendatarios como de los arrendadores.</p>
+    </div>
+    
     <script src="/js/script.js" th:src="@{/js/script.js}"></script>
   </body>
 </html>

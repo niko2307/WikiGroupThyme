@@ -29,10 +29,14 @@ public class controller {
         List<TeamMember> teamMembers = new ArrayList<>();
         
         // Añadir miembros del equipo
-        teamMembers.add(new TeamMember("Nicolas Aguilar", "Desarrollador", "Experto en Java y Spring.", "../images/pfp/pfpNicolas.jpeg"));
-        teamMembers.add(new TeamMember("Juan Torres", "Diseñador", "Especialista en UI/UX.", "../images/pfp/pfpJuan.jpeg"));
-        teamMembers.add(new TeamMember("Gustavo Parra", "Gerente de Proyecto", "Liderando proyectos de software.", "../images/pfp/pfpGustavo.jpeg"));
-        teamMembers.add(new TeamMember("Sebastian Nariño", "Gerente de Proyecto", "Liderando proyectos de software.", "../images/pfp/pfpSebastian.jpeg"));
+        teamMembers.add(new TeamMember("Nicolas Aguilar", "Desarrollador", "Experto en Java y Spring.", "Desarrollador con más de 5 años de experiencia en aplicaciones web y empresariales. Especialista en Java y Spring, apasionado por las metodologías ágiles y la mejora continua.", "../images/pfp/pfpNicolas.jpeg"));
+
+        teamMembers.add(new TeamMember("Juan Torres", "Diseñador", "Especialista en UI/UX.", "Diseñador con amplia experiencia en la creación de interfaces de usuario intuitivas y atractivas. Apasionado por mejorar la experiencia del usuario y la estética visual.", "../images/pfp/pfpJuan.jpeg"));
+
+        teamMembers.add(new TeamMember("Gustavo Parra", "Gerente de Proyecto", "Liderando proyectos de software.", "Gerente de proyecto con experiencia en liderar equipos de desarrollo de software. Enfocado en la entrega puntual y la calidad del producto.", "../images/pfp/pfpGustavo.jpeg"));
+        
+        teamMembers.add(new TeamMember("Sebastian Nariño", "Gerente de Proyecto", "Liderando proyectos de software.", "Gerente de proyecto con sólida experiencia en dirigir equipos de desarrollo. Comprometido con la entrega de proyectos exitosos y la satisfacción del cliente.", "../images/pfp/pfpSebastian.jpeg"));
+
 
         model.addAttribute("teamMembers", teamMembers);
 

@@ -16,20 +16,22 @@
   </head>
   <body>
     <div th:replace="fragments/navbar :: header"></div>
-
     <div class="wikigroup-container">
       <div class="wikigroup">
         <h1 class="title">Conoce nuestro equipo</h1>
         <div class="team-list">
-          <div th:each="member : ${teamMembers}" class="member">
+          <div th:each="member : ${teamMembers}" class="member" onclick="showModal(this)">
             <img th:src="@{${member.imageUrl}}" alt="Foto de miembro" />
             <h2 th:text="${member.name}" class="name">Nombre del miembro</h2>
             <h3 th:text="${member.role}" class="role">Rol del miembro</h3>
             <p th:text="${member.bio}" class="bio">Descripción del miembro</p>
+            <p th:text="${member.description}" class="description"></p>
           </div>
         </div>
       </div>
     </div>
-    <script src="/js/script.js" th:src="@{/js/script.js}"></script>
+
+  
+        <script src="/js/script.js" th:src="@{/js/script.js}"></script>
   </body>
 </html>

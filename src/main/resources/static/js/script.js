@@ -79,6 +79,8 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+// para pruebas 
+
 document.addEventListener('DOMContentLoaded', function () {
   const pruebaItems = document.querySelectorAll('.prueba-item');
   const modalOverlay = document.getElementById('modal-overlay');
@@ -115,3 +117,4 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
